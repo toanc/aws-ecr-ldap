@@ -51,7 +51,6 @@ ADD configs/nginx/ssl /etc/nginx/ssl
 ADD configs/entrypoint.sh /entrypoint.sh
 ADD configs/auth_update.sh /auth_update.sh
 ADD configs/renew_token.sh /renew_token.sh
-ADD configs/start.sh /start.sh
 
 EXPOSE 80 443
 
