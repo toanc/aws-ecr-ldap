@@ -4,7 +4,7 @@
 
 Since, We are preparing to migrate all our services for authentication with OKTA (SS0) so Docker Registry system is one of them
 
-In current state, We run a instance for docker registry where it authenticated with local password which We setup before. 
+In current state, We run docker-registry on an instance where it authenticated with local password which We setup before. 
 
 2 main disadvantages of this architecture are 
   - It does not scale to adapt with our growth 
@@ -12,7 +12,7 @@ In current state, We run a instance for docker registry where it authenticated w
 
 So A(ws)-E(cr)-L(dap) is the solution to integrate AWS ECR with LDAP authentication for the users 
 
-Basically, We will use AWS ECR service instead of Docker Registry self-hosted. But having bit modification for LDAP authentication with Nginx as frontend to allow people pull & push image. Developers just need to remember their own LDAP account to interact with AWS ECR system at behind. 
+Basically, We will use AWS ECR service instead of Docker Registry self-hosted. But having bit modification with Nginx for LDAP authentication as Gateway to allow people pull & push image into AWS ECR behind. Developers just need to remember their own LDAP account to interact with AWS ECR system at behind. 
 
 # How to setup ?
 
